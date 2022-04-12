@@ -1,5 +1,5 @@
 # stream-tv-token
-# This is the token for a Blockchain Streaming Application.
+#### This is the token for a Blockchain Streaming Application.
 
 ## Technologies Used
 * React
