@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ethers, utils } from "ethers";
-import abi from "./contracts/MemeCoin.json";
+import abi from "./contracts/StreamX.json";
 
 function App() {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
@@ -13,7 +13,7 @@ function App() {
   const [yourWalletAddress, setYourWalletAddress] = useState(null);
   const [error, setError] = useState(null);
 
-  const contractAddress = '0x3ACa50B150c180360F445C547BB11a8975760473';
+  const contractAddress = '0x8901C88E07aBC1326f80D752927c80Fb66B3a457';
   const contractABI = abi.abi;
 
   const checkIfWalletIsConnected = async () => {
@@ -75,9 +75,9 @@ function App() {
         const tokenContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         const txn = await tokenContract.transfer(inputValue.walletAddress, utils.parseEther(inputValue.transferAmount));
-        console.log("Transfering tokens...");
+        console.log("Transferring tokens...");
         await txn.wait();
-        console.log("Tokens Transfered", txn.hash);
+        console.log("Tokens Transferred", txn.hash);
 
       } else {
         console.log("Ethereum object not found, install Metamask.");
@@ -152,7 +152,7 @@ function App() {
   return (
     <main className="main-container">
       <h2 className="headline">
-        <span className="headline-gradient">Meme Coin Project</span>
+        <span className="headline-gradient">StreamX Token</span>
         <img className="inline p-3 ml-2" src="https://i.imgur.com/5JfHKHU.png" alt="Meme Coin" width="60" height="30" />
       </h2>
       <section className="customer-section px-10 pt-5 pb-10">
