@@ -1,15 +1,14 @@
-# Basic Sample Hardhat Project
+# stream-tv-token
+#### This is the token for a Blockchain Streaming Application.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+## Technologies Used
+* React
+* Solidity
+* Tailwind CSS
+* Openzeppelin
+* Hardhat
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+## Setup Process
+1. Clone the app using a text editor.
+2. On your terminal switch to the __stream-client__ directory. 
+3. Run __npm start__.
